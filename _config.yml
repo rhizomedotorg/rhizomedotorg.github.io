@@ -1,0 +1,9 @@
+name: Rhizome 
+url: http://localhost:4000
+description: "" 
+
+permalink: /:year/:month/:day/:title/
+paginate: 10
+pygments: true
+
+exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
