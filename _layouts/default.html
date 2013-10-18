@@ -1,62 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-
   <meta charset="UTF-8">
   <title>{{ page.title }}</title>
-  <meta name="viewport" content="width=device-width">
 
   <link href="/assets/css/style.css" rel="stylesheet" />
   <link href="/assets/css/syntax.css" rel="stylesheet" />
-
 </head>
 
 <body>
-
-
-
-  <header id="header">
-    <h1><a href="/">{{ site.name }}</a></h1>
-  </header>
-
-
-
-  <div id="page">
-
-
-
-    <div id="sidebar">
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/archives">Archive</a></li>
-          <li><a href="/about">About</a></li>
-        </ul>
-      </nav>
+    <div class="post-browser">
+     <ul>
+        <li><a class="active" href="#">Site Sprint 2013 Post Mortum</a></li>
+        <li><a href="#">Deploy Inside Django's Admin</a></li>
+        <li><a href="#">D3.js + Raspberry Pi</a></li>
+        <li><a href="#">Fullscreen GIF Viewier Released</a></li>
+        <li><a href="#">Eyebeam's Create Your Own Subnode</a></li>
+        <li><a href="#"><img src="/assets/img/arrow.png" alt="More" /></a></li>
+      </ul>
     </div>
+    <div id="main">
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/archives">Archive</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="http://rhizome.org/" target="_blank">Rhizome</a></li>
+            </ul>
+        </nav>
+        <div id="content">
+            <h1>{{ site.name }}</h1>
+            <img class="dinkus" src="/assets/img/lab.png" />
 
+            <h2>Site Sprint 2013 Post Mortum</h2>
+            <div class="byline">11 / 11 / 2013&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;by Scott</div>
 
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lobortis, sem gravida consectetur tincidunt, est massa condimentum metus, in dapibus dolor mauris vitae quam. Vivamus congue, augue sodales suscipit auctor, mauris nunc vulputate est, porttitor venenatis augue orci at est. Nullam id turpis eros. Phasellus rutrum rhoncus suscipit. Vestibulum adipiscing luctus sapien, ac eleifend lorem vehicula sed.</p>
 
-    <div id="content">
-      {{ content }}
+            <p>Fusce pellentesque ligula vel nisl tempor vestibulum. Phasellus dictum, odio non convallis auctor, orci tortor imperdiet nisl, vel gravida augue leo at mi. Proin velit metus, semper auctor ante eu, dapibus auctor orci. Nulla tristique convallis bibendum. Integer at fermentum est. Quisque sed quam quis nulla feugiat luctus ac ac libero.</p>
+          <!-- {{ content }} -->
+        </div>
     </div>
-
-
-
-  </div>
-
-
 
 <!--   <footer id="footer">
     <p class="copyright">Copyright &copy; {{ site.time | date: '%Y' }} {{ site.org }}. Powered by <a href="http://jekyllrb.com">Jekyll</a></p>
   </footer>
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 
   <script>
   </script>
 -->
-
-
 </body>
 </html>
