@@ -61,7 +61,6 @@ article .meta {
 body, html {
     margin: 0;
     font-family: DefaultFace;
-    -webkit-font-smoothing: antialiased;
 }
 
 a { text-decoration: none; }
