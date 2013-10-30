@@ -1,46 +1,3 @@
-/*** Posts ***/
-/*article {
-    margin-bottom: 40px;
-}
-
-article h1 {
-    font-size: 17px;
-    margin: 0 0 10px 0;
-}
-article h1 a {
-    border: none;
-}
-article h1 a.anchor {
-    margin-left: 8px;
-}
-
-article img {
-    display: block;
-    text-align: center;
-    margin: 0 auto 1em auto;
-}
-
-article .meta {
-    padding-top: 6px;
-    font-size: 0.85em;
-    font-style: italic;
-}*/
-
-/*** Pagination ***/
-.postnavigation {
-    padding-top: 10px;
-    text-align: center;
-    font-size: 0.85em;
-}
-
-.postnavigation .left {
-    float: left;
-}
-
-.postnavigation .right {
-    float: right;
-}
-
 /*** Fonts ***/
 @font-face {
     font-family: 'RHIZOME';
@@ -48,6 +5,8 @@ article .meta {
          url('../fonts/TradeGothicLT-CondEighteen.svg#TradeGothicLT-CondEighteen') format('svg'),
          url('../fonts/TradeGothicLT-CondEighteen.woff') format('woff'),
          url('../fonts/TradeGothicLT-CondEighteen.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
@@ -56,11 +15,13 @@ article .meta {
          url('../fonts/HelveticaNeue.svg#HelveticaNeue') format('svg'),
          url('../fonts/HelveticaNeue.woff') format('woff'),
          url('../fonts/HelveticaNeue.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 body, html {
     margin: 0;
-    font-family: DefaultFace;
+    font-family: DefaultFace, sans-serif;
 }
 
 a { text-decoration: none; }
@@ -143,7 +104,7 @@ ol li {
 #content h1 {
     margin: 160px 0 0 0;
     padding: 0;
-    font-family: RHIZOME;
+    font-family: RHIZOME, sans-serif;
     font-size: 43px;
     color: #5878cc;
     text-transform: uppercase;
@@ -156,7 +117,7 @@ ol li {
 
 article h2 {
     text-align: center;
-    font-family: RHIZOME;
+    font-family: RHIZOME, sans-serif;
     font-size: 24px;
     padding: 0;
     margin: 0;
@@ -186,7 +147,7 @@ nav {
 
 nav {
     margin-top: 260px;
-    font-family: DefaultFace;
+    font-family: DefaultFace, sans-serif;
     text-align: right;
 }
 
@@ -207,7 +168,7 @@ nav a:hover {
 nav li:last-child a {
     position: relative;
     left: 7px;
-    font-family: RHIZOME;
+    font-family: RHIZOME, sans-serif;
     font-size: 27px;
     color: white;
     background: #cfcfcf;
