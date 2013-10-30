@@ -1,17 +1,17 @@
 ---
 layout: default
 ---
-<article class="post">
 
-	{% if page.external-url %}
-		<h1>
-			<a href="{{ page.external-url }}">{{ page.title }}</a> 
-		</h1>
-	{% else %}
-		<h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
-	{% endif %}
+<article>
+    {% if page.external-url %}
+        <h2>
+            <a href="{{ page.external-url }}">{{ page.title }}</a> 
+        </h2>
+    {% else %}
+        <h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
+    {% endif %}
 
-	<p class="meta"><span class="postdate">{{ page.date | date: "%b %d, %Y" }}</span></p>
-	<div class="post-content">{{ content }}</div>
+    <div class="byline">{{ page.date | date: "%m / %d / %Y" }}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;by {{ page.author }}</div>
 
+    {{ content }}
 </article>

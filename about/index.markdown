@@ -1,11 +1,8 @@
 ---
-layout: default
+layout: post 
 title: About
 ---
 
-This is where you would but a short bio, and/or a description of your site. It also serves as an example of how to set up a standalone page. For example:
+Flexibility and experimentation are paramount at Rhizome. For an organization of small size (IRL that is, we’re huge where it counts [online]), we do a lot of in-house software development. Our engineers created this blog, Rhizome Labs, to share knowledge and tactics, and to provide a resource for technologists working within arts & cultural institutions. At Rhizome we leverage open source tech and host our projects on GitHub. Stay tuned.
 
-<img src="/images/shakespeare.png" class="right" />
-**William Shakespeare** (26 April 1564 – 23 April 1616) was an English poet and playwright, widely regarded as the greatest writer in the English language and the world's pre-eminent dramatist. He is often called England's national poet and the "Bard of Avon". His extant works, including some collaborations, consist of about 38 plays, 154 sonnets, two long narrative poems, and a few other verses, the authorship of some of which is uncertain. His plays have been translated into every major living language and are performed more often than those of any other playwright.
-
-Shakespeare was born and brought up in Stratford-upon-Avon. At the age of 18, he married Anne Hathaway—no, not *that* Anne Hathaway—with whom he had three children.
+Rhizome is a nonprofit deeply rooted in artistic practices that engage with technology. Since 1996, our website has provided a platform for [blah blah blah]. Our offices are located within the New Museum of Contemporary Art in NYC.

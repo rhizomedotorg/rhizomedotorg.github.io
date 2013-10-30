@@ -44,23 +44,29 @@ article .meta {
 /*** Fonts ***/
 @font-face {
     font-family: 'RHIZOME';
-    src: url('../fonts/TradeGothicLT-CondEighteen.eot');
-    src: url('../fonts/TradeGothicLT-CondEighteen.eot?#iefix') format('embedded-opentype'),
+    src: url('../fonts/TradeGothicLT-CondEighteen.eot') format('embedded-opentype'),
+         url('../fonts/TradeGothicLT-CondEighteen.svg#TradeGothicLT-CondEighteen') format('svg'),
          url('../fonts/TradeGothicLT-CondEighteen.woff') format('woff'),
-         url('../fonts/TradeGothicLT-CondEighteen.ttf') format('truetype'),
-         url('../fonts/TradeGothicLT-CondEighteen.svg#TradeGothicLT-CondEighteen') format('svg');
+         url('../fonts/TradeGothicLT-CondEighteen.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'DefaultFace';
+    src: url('../fonts/HelveticaNeue.eot') format('embedded-opentype'),
+         url('../fonts/HelveticaNeue.svg#HelveticaNeue') format('svg'),
+         url('../fonts/HelveticaNeue.woff') format('woff'),
+         url('../fonts/HelveticaNeue.ttf') format('truetype');
 }
 
 body, html {
     margin: 0;
-    font-family: "Helvetica Neue", "Helvetica", sans-serif;
+    font-family: DefaultFace;
     -webkit-font-smoothing: antialiased;
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
 }
 
 a { text-decoration: none; }
 
-p {
+article {
     text-align: left;
     font-size: 14px;
     line-height: 19px;
@@ -74,6 +80,10 @@ ul, li {
     padding: 0;
 }
 
+ol li {
+    list-style: decimal;
+}
+
 /*** post browser ***/
 
 .post-browser {
@@ -84,6 +94,7 @@ ul, li {
     top: 0;
     height: 34px;
     overflow: hidden;
+    z-index: 10;
 }
 
 .post-browser li {
@@ -144,7 +155,8 @@ ul, li {
     margin: 22px 0 50px 0;
 }
 
-h2 {
+article h2 {
+    text-align: center;
     font-family: RHIZOME;
     font-size: 24px;
     padding: 0;
@@ -152,7 +164,13 @@ h2 {
     line-height: 30px;
 }
 
-.byline {
+article h2 a, article h2 a:visited, article h2 a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+article .byline {
+    text-align: center;
     font-size: 14px;
     line-height: 24px;
     margin: 2px 0 22px 0;
@@ -161,13 +179,15 @@ h2 {
 /*** nav ***/
 
 nav {
-    width: 16%;
+    position: fixed;
+    top: 0;
+    width: 132px;
     float: left;
 }
 
 nav {
     margin-top: 260px;
-    font-family: "Helvetica", sans-serif;
+    font-family: DefaultFace;
     text-align: right;
 }
 
