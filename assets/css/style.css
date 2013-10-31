@@ -9,19 +9,9 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'DefaultFace';
-    src: url('../fonts/HelveticaNeue.eot') format('embedded-opentype'),
-         url('../fonts/HelveticaNeue.svg#HelveticaNeue') format('svg'),
-         url('../fonts/HelveticaNeue.woff') format('woff'),
-         url('../fonts/HelveticaNeue.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 body, html {
     margin: 0;
-    font-family: DefaultFace, sans-serif;
+    font-family: 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -33,6 +23,10 @@ article {
     line-height: 19px;
     padding: 0;
     margin: 0 0 25px 0;
+}
+
+article p {
+    margin-top: 22px;
 }
 
 ul, li {
@@ -53,7 +47,7 @@ ol li {
     background: black;
     position: fixed;
     top: 0;
-    height: 34px;
+    height: 30px;
     overflow: hidden;
     z-index: 10;
 }
@@ -66,7 +60,7 @@ ol li {
 .post-browser a {
     display: block;
     color: #cfcfcf;
-    padding: 9px;
+    padding: 8px 9px;
 }
 
 .post-browser li:first-child {
@@ -134,7 +128,7 @@ article .byline {
     text-align: center;
     font-size: 14px;
     line-height: 24px;
-    margin: 2px 0 22px 0;
+    margin: 2px 0 0 0;
 }
 
 /*** nav ***/
@@ -148,7 +142,7 @@ nav {
 
 nav {
     margin-top: 260px;
-    font-family: DefaultFace, sans-serif;
+    font-family: 'Helvetica Neue', sans-serif;
     text-align: right;
 }
 

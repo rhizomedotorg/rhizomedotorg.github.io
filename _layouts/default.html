@@ -11,12 +11,10 @@
 <body>
     <div class="post-browser">
      <ul>
-        <li><a class="active" href="#">Site Sprint 2013 Post Mortum</a></li>
-        <li><a href="#">Deploy Inside Django's Admin</a></li>
-        <li><a href="#">D3.js + Raspberry Pi</a></li>
-        <li><a href="#">Fullscreen GIF Viewier Released</a></li>
-        <li><a href="#">Eyebeam's Create Your Own Subnode</a></li>
-        <li><a href="#"><img src="/assets/img/arrow.png" alt="More" /></a></li>
+        {% for post in site.posts %}
+          <li><a {% if page.url == post.url %}class="active"{% endif %} href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+        <li><a href="#"><img src="/assets/img/arrow.png" alt="More" /></a></li> 
       </ul>
     </div>
     <div id="main">
