@@ -8,3 +8,4 @@ pygments: true
 exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
 timezone: America/New_York
 org: Rhizome
+excerpt_separator: <!--more-->
