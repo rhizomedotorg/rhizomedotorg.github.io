@@ -17,6 +17,8 @@ Normally, the steps required to make changes to a production codebase are this:
 
 The above process requires proficiency in, at the very least, a version control system, a text editor and either continuous integration software w/ GUI (such as the excellent Jenkins) or the command line. That’s a wide barrier for non-coders to get around. However, for coder-coders like me, it’s a comfortable workflow.
 
+<!--more-->
+
 A developer who’s been asked to swap out copy, update images or make stylistic tweaks to a website knows the value of being able to defer these tasks to other people. Well-designed CMSs can be used to accomplish this deferment, but that’s not the kind of CMS we’re stuck with.
 
 So we developed an alternative series of steps:
