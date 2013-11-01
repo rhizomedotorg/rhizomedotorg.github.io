@@ -15,7 +15,7 @@ Normally, the steps required to make changes to a production codebase are:
 4. Commit changes
 5. Deploy changes to production
 
-The above process requires proficiency in, at the very least, a version control system, a text editor and either continuous integration software (such as the excellent [Jenkins](http://jenkins-ci.org/)) or the command line. That’s a wide barrier for non-coders to get around. However, for coder-coders like me, it’s admissible.
+The above process requires proficiency in, at the very least, a version control system, a text editor and either continuous integration software (such as the excellent [Jenkins](http://jenkins-ci.org/content/about-jenkins-ci)) or the command line. That’s a wide barrier for non-coders to get around. However, for coder-coders like me, it’s admissible.
 
 <!--more-->
 
@@ -27,7 +27,7 @@ So we used this alternative series of steps:
 2. Edit files there
 3. Deploy changes
 
-To make step 3 simple enough, I threw together a webapp consisting of a single “Deploy” button the night before, my first foray into the late Aaron Shwartz's [web.py](http://webpy.org/). Additionally, a document was shared on how to use GitHub to browse repos, edit files and track issues (props to GitHub for making this all very accessible).
+To make step 3 simple enough, I threw together a webapp consisting of a single “Deploy” button the night before, my first foray into the late Aaron Shwartz's [web.py](http://webpy.org/philosophy). Additionally, a document was shared on how to use GitHub to browse repos, edit files and track issues (props to GitHub for making this all very accessible).
 
 Everyone touched the code at some point and we found it to be a positive, demystifying experience. The telepathic ecstasy resultant from sharing ownership of our institution's online manifestation was a great plus. It’s difficult for my inner-engineer to see wisdom in letting amateurs monkey around with production code, but we found the benefits in our case outweighed the risks.
 
