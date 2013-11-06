@@ -13,6 +13,7 @@ body, html {
     margin: 0;
     font-family: 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 a { text-decoration: none; }
@@ -86,7 +87,6 @@ ol li {
 #main {
     width: 830px;
     margin: 0 auto; 
-    border: 1px solid blue;
 }
 
 #content {
@@ -131,6 +131,14 @@ article .byline {
     margin: 2px 0 0 0;
 }
 
+article img {
+    margin: 0 auto;
+    display: block;
+}
+
+article .caption {
+    text-align: center;
+}
 /*** nav ***/
 
 nav {

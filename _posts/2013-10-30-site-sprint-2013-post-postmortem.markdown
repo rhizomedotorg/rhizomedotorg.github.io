@@ -5,7 +5,9 @@ date: 2013-10-30
 author: "Scott"
 ---
 
-This year at Rhizome’s annual site sprint, staff spent three days in Red Hook braving the wettish depths of rhizome.org, with the intent of sprucing things up a bit. My takeaway was the realization that opening up a production codebase to non-coders is an effective strategy for increasing productivity and boosting team spirit.
+This year at Rhizome’s annual site sprint, staff spent three days in Red Hook braving the wettish depths of rhizome.org, with the intent of sprucing things up a bit. My takeaway was that opening up a production codebase to non-coders is an effective strategy for increasing productivity and boosting team spirit.
+
+<!--more-->
 
 Normally, the steps required to make changes to a production codebase are:
 
@@ -16,8 +18,6 @@ Normally, the steps required to make changes to a production codebase are:
 5. Deploy changes to production
 
 The above process requires proficiency in, at the very least, a version control system, a text editor and either continuous integration software (such as the excellent [Jenkins](http://jenkins-ci.org/)) or the command line. That’s a wide barrier for non-coders to get around. However, for coder-coders like me, it’s admissible.
-
-<!--more-->
 
 Any developer who’s been asked to swap out copy, update images or make stylistic tweaks to a website knows the value of being able to defer these tasks to others. Insanely great CMSs offer features to do so, but that’s not the kind of CMS most orgs are stuck with.
 
@@ -31,4 +31,6 @@ To make step 3 simple enough, I threw together a webapp consisting of a single �
 
 Everyone touched the code at some point and we found it to be a positive, demystifying experience. The telepathic ecstasy resultant from sharing ownership of our institution's online manifestation was a great plus. It’s difficult for my inner-engineer to see wisdom in letting amateurs monkey around with production code, but we found the benefits in our case outweighed the risks.
 
-[Illustration: Jenkins GUI vs. “Deploy” button]
+{% include image.html url="/assets/img/screenshot-dashboard-jenkins1.png" description="Default Jenkins dashboard" %}  
+
+{% include image.html url="/assets/img/screenshot-deploy-btn.png" description="The much simpler Deploy button" %}
