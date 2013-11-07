@@ -4,17 +4,28 @@ title: Rhizome Labs
 ---
 
 {% for post in paginator.posts %}
+	{% unless forloop.first %}
+	    <img class="dinkus separator" src="/assets/img/lab.png" />
+    {% endunless %}
+           
     <article>
-    {% if page.external-url %}
-        <h2>
-            <a href="{{ post.external-url }}">{{ post.title }}</a> 
-        </h2>
-    {% else %}
         <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-    {% endif %}
+        <div class="byline">{{ post.date | date: "%m / %d / %Y" }}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;by {{ post.author }}</div>
 
-    <div class="byline">{{ post.date | date: "%m / %d / %Y" }}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;by {{ post.author }}</div>
-
-    {{ post.excerpt }}... <a href="{{ post.url }}">More</a>
+        {{ post.content }}
+	    <a href="{{ post.url }}#disqus_thread"></a>
     </article>
 {% endfor %}
+
+<script type="text/javascript">
+/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'rhizomelabs'; // required: replace example with your forum shortname
+
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function () {
+var s = document.createElement('script'); s.async = true;
+s.type = 'text/javascript';
+s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>

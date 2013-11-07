@@ -16,18 +16,9 @@ body, html {
     -moz-osx-font-smoothing: grayscale;
 }
 
-a { text-decoration: none; }
-
-article {
-    text-align: left;
-    font-size: 14px;
-    line-height: 19px;
-    padding: 0;
-    margin: 0 0 25px 0;
-}
-
-article p {
-    margin-top: 22px;
+a, a:visited { 
+    color: #5878cc;
+    text-decoration: none; 
 }
 
 ul, li {
@@ -38,6 +29,14 @@ ul, li {
 
 ol li {
     list-style: decimal;
+}
+
+.no-border {
+    border: none;
+}
+
+#disqus_thread {
+    margin-top: 20px;
 }
 
 /*** post browser ***/
@@ -78,22 +77,29 @@ ol li {
     color: #0f0;
 }
 
-.post-browser a:hover {
+.post-browser a:not(.active):hover {
     color: white;
 }
 
 /*** content ***/
 
-#main {
-    width: 830px;
-    margin: 0 auto; 
+#column1 {
+    float: left;
+    width: 252px;
+    height: 500px;
+}
+
+#column2 {
+    height: 100%;
+    overflow: hidden;
+    max-width: 1100px;
+    margin-bottom: 50px;
 }
 
 #content {
-    float: right;
-    width: 72%;
-    height: 800px;
+    width: 598px;
     text-align: center;
+    margin: 0 auto;
 }
 
 #content h1 {
@@ -101,13 +107,27 @@ ol li {
     padding: 0;
     font-family: RHIZOME, sans-serif;
     font-size: 43px;
-    color: #5878cc;
     text-transform: uppercase;
     font-weight: normal;
 }
 
-#content img.dinkus {
+img.dinkus {
     margin: 22px 0 50px 0;
+}
+
+img.dinkus.seperator {
+    margin-bottom: 22px;
+}
+
+article {
+    text-align: left;
+    font-size: 14px;
+    line-height: 19px;
+    padding: 0;
+}
+
+article p {
+    margin: 22px 0;
 }
 
 article h2 {
@@ -131,13 +151,25 @@ article .byline {
     margin: 2px 0 0 0;
 }
 
+article a {
+    font-weight: 500;
+}
+
+article a:hover {
+    text-decoration: underline;
+}
+
 article img {
-    margin: 0 auto;
     display: block;
+    padding: 4px;
+    margin-left: 20px;
+    border: 1px solid #cfcfcf;
 }
 
 article .caption {
-    text-align: center;
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 12px;
 }
 /*** nav ***/
 
@@ -145,24 +177,21 @@ nav {
     position: fixed;
     top: 0;
     width: 132px;
+    margin-left: 80px;
     float: left;
-}
-
-nav {
     margin-top: 260px;
     font-family: 'Helvetica Neue', sans-serif;
     text-align: right;
 }
 
 nav a {
-    color: #5878cc;
     font-weight: bold;
     font-size: 18px;
     padding: 4px;
     display: inline-block;
 }
 
-nav a:hover {
+nav a:hover, nav a.active {
     color: black;
 }
 

@@ -1,6 +1,6 @@
 name: Rhizome Labs
 url: http://localhost:4000
-description: "" 
+description: "Rhizome developer blog" 
 
 paginate: 5
 pygments: true

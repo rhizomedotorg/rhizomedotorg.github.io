@@ -14,22 +14,23 @@
         {% for post in site.posts %}
           <li><a {% if page.url == post.url %}class="active"{% endif %} href="{{ post.url }}">{{ post.title }}</a></li>
         {% endfor %}
-        <li><a href="#"><img src="/assets/img/arrow.png" alt="More" /></a></li> 
+        <li><a href="/archives"><img src="/assets/img/arrow.png" alt="More" /></a></li> 
       </ul>
     </div>
-    <div id="main">
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/archives">Archive</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="http://rhizome.org/" target="_blank">Rhizome</a></li>
-            </ul>
-        </nav>
+    <nav>
+        <ul>
+            <li><a {% if page.url == "/index.html" %}class="active"{% endif %} href="/">Home</a></li>
+            <li><a {% if page.url == "/archives/index.html" %}class="active"{% endif %} href="/archives">Archive</a></li>
+            <li><a {% if page.url == "/about/index.html" %}class="active"{% endif %} href="/about">About</a></li>
+            <li><a href="http://rhizome.org/" target="_blank">Rhizome</a></li>
+        </ul>
+    </nav>
+    <div id="column1"></div>
+    <div id="column2">
         <div id="content">
-            <h1>{{ site.name }}</h1>
+            <h1><a href="/">{{ site.name }}</a></h1>
             <img class="dinkus" src="/assets/img/lab.png" />
-           
+
             {{ content }}
         </div>
     </div>
