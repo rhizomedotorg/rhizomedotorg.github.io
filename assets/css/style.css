@@ -35,10 +35,10 @@ ol li {
     border: none;
 }
 
-#disqus_thread {
+/*#disqus_thread {
     margin-top: 20px;
 }
-
+*/
 /*** post browser ***/
 
 .post-browser {
@@ -92,7 +92,7 @@ ol li {
 #column2 {
     height: 100%;
     overflow: hidden;
-    max-width: 1100px;
+    max-width: 1000px;
     margin-bottom: 50px;
 }
 
