@@ -38,7 +38,7 @@ article div.no-border {
 /*** post browser ***/
 
 #post-browser {
-    text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.4);
+    text-shadow: 0px 0px 0px rgba(255, 255, 255, 0.4);
     font-size: 14px;
     width: 100%;
     background: black;
@@ -162,7 +162,7 @@ article .byline {
 }
 
 article a {
-    text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.4);
+    text-shadow: 0px 0px 0px rgba(255, 255, 255, 0.4);
 }
 
 article a:hover {
