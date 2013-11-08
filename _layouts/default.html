@@ -14,13 +14,13 @@
         {% for post in site.posts %}
           <li><a {% if page.url == post.url %}class="active"{% endif %} href="{{ post.url }}">{{ post.title }}</a></li>
         {% endfor %}
-        <li><a href="/archives"><img src="/assets/img/arrow.png" alt="More" /></a></li> 
+        <li><a href="/archive"><img src="/assets/img/arrow.png" alt="More" /></a></li> 
       </ul>
     </div>
     <nav>
         <ul>
             <li><a {% if page.url == "/index.html" %}class="active"{% endif %} href="/">Home</a></li>
-            <li><a {% if page.url == "/archives/index.html" %}class="active"{% endif %} href="/archives">Archive</a></li>
+            <li><a {% if page.url == "/archive/index.html" %}class="active"{% endif %} href="/archive">Archive</a></li>
             <li><a {% if page.url == "/about/index.html" %}class="active"{% endif %} href="/about">About</a></li>
             <li><a href="http://rhizome.org/" target="_blank">Rhizome</a></li>
         </ul>

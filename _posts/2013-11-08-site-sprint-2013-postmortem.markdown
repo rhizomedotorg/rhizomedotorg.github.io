@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Site Sprint 2013 Postmortem"
-date: 2013-10-30
+date: 2013-11-08
 author: "Scott"
 ---
 
@@ -29,8 +29,8 @@ So we used this alternative series of steps:
 2. Edit files there
 3. Deploy changes
 
-To make step 3 simple enough, I threw together a webapp consisting of a single “Deploy” button the night before, my first foray into the late Aaron Shwartz's [web.py](http://webpy.org/philosophy). Additionally, a document was shared on how to use GitHub to browse repos, edit files and track issues (props to GitHub for making this all very accessible).
+To make step 3 simple enough, I threw together a webapp consisting of a single “Deploy” button the night before, my first foray into Aaron Shwartz's [web.py](http://webpy.org/philosophy). Additionally, a document was shared on how to use GitHub to browse repos, edit files and track issues (props to GitHub for making this all very accessible).
 
-{% include image.html url="/assets/img/screenshot-deploy-btn.png" class="no-border" %}
+{% include image.html url="/assets/img/screenshot-deploy-btn.png" %}
 
 Everyone touched the code at some point and we found it to be a positive, demystifying experience. It’s difficult for my inner-engineer to see wisdom in letting amateurs monkey around with production code, but we found the benefits in our case outweighed the risks.

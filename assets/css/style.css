@@ -31,17 +31,14 @@ ol li {
     list-style: decimal;
 }
 
-.no-border {
+article div.no-border {
     border: none;
 }
 
-/*#disqus_thread {
-    margin-top: 20px;
-}
-*/
 /*** post browser ***/
 
 .post-browser {
+    text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.4);
     font-size: 14px;
     width: 100%;
     background: black;
@@ -85,7 +82,7 @@ ol li {
 
 #column1 {
     float: left;
-    width: 252px;
+    width: 200px;
     height: 500px;
 }
 
@@ -94,6 +91,7 @@ ol li {
     overflow: hidden;
     max-width: 1000px;
     margin-bottom: 50px;
+    padding: 0 114px;
 }
 
 #content {
@@ -127,7 +125,7 @@ article {
 }
 
 article p {
-    margin: 22px 0;
+    margin: 0 0 25px 0;
 }
 
 article h2 {
@@ -139,31 +137,44 @@ article h2 {
     line-height: 30px;
 }
 
-article h2 a, article h2 a:visited, article h2 a:hover {
+article h2 a, 
+article h2 a:visited, 
+article h2 a:hover {
     text-decoration: none;
     color: black;
+}
+
+article.archive h2 a,
+article.archive h2 a:visited {
+    color: #5878cc;
 }
 
 article .byline {
     text-align: center;
     font-size: 14px;
     line-height: 24px;
-    margin: 2px 0 0 0;
+    margin: 2px 0 25px 0;
 }
 
 article a {
-    font-weight: 500;
+    text-shadow: 0px 2px 2px rgba(255, 255, 255, 0.4);
 }
 
 article a:hover {
     text-decoration: underline;
 }
 
+article .img-box {
+    width: 596px;
+    text-align: center;
+    border: 1px solid #cfcfcf;
+    margin-bottom: 25px;
+}
+
 article img {
     display: block;
-    padding: 4px;
-    margin-left: 20px;
-    border: 1px solid #cfcfcf;
+    margin: 0 auto;
+    padding: 6px 0;
 }
 
 article .caption {
@@ -191,7 +202,10 @@ nav a {
     display: inline-block;
 }
 
-nav a:hover, nav a.active {
+nav a.active {
+    color: #cfcfcf;
+}
+nav a:hover:not(.active) {
     color: black;
 }
 
