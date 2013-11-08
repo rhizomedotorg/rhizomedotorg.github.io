@@ -3,25 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ page.title }}</title>
-
-    {% if page.description %}
-        <meta name="description" content="{{ page.description }}">
-    {% else %}
-        <meta name="description" content="{{ site.description }}">
-    {% endif %}
+    <meta name="description" content="{{ site.description }}">
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@rhizome">
+    
     <meta content="{{ site.name }}" property="og:site_name">
     <meta content="{{ page.title }}" property="og:title">
     <meta content="{% if page.website %}website{% else %}article{% endif %}" property="og:type">
-    {% if page.description %}
-        <meta content="{{ page.description }}" property="og:description">
-    {% else %}
-        <meta content="{{ site.description }}" property="og:description">
-    {% endif %}
+    <meta content="{{ site.description }}" property="og:description">
     <meta content="{{ site.url }}{% if page.url != '/index.html' %}{{ page.url }}{% endif %}" property="og:url">
-    <meta content="{{ site.url }}/assets/img/lab.png" property="og:image">
 
     <link href="/assets/css/style.css" rel="stylesheet" />
     <link href="/assets/css/syntax.css" rel="stylesheet" />
