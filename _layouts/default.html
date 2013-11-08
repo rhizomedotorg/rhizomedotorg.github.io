@@ -1,15 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>{{ page.title }}</title>
+    <meta charset="UTF-8">
+    <title>{{ page.title }}</title>
 
-  <link href="/assets/css/style.css" rel="stylesheet" />
-  <link href="/assets/css/syntax.css" rel="stylesheet" />
+    {% if page.description %}
+        <meta name="description" content="{{ page.description }}">
+    {% else %}
+        <meta name="description" content="{{ site.description }}">
+    {% endif %}
+
+    <!-- social -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@rhizome">
+    <meta content="{{ site.name }}" property="og:site_name">
+    <meta content="{{ page.title }}" property="og:title">
+    <meta content="{% if page.website %}website{% else %}article{% endif %}" property="og:type">
+    {% if page.description %}
+        <meta content="{{ page.description }}" property="og:description">
+    {% else %}
+        <meta content="{{ site.description }}" property="og:description">
+    {% endif %}
+    <meta content="{{ site.url }}{% if page.url != '/index.html' %}{{ page.url }}{% endif %}" property="og:url">
+    <meta content="{{ site.url }}/assets/img/lab.png" property="og:image">
+
+    <link href="/assets/css/style.css" rel="stylesheet" />
+    <link href="/assets/css/syntax.css" rel="stylesheet" />
 </head>
 
 <body>
-    <div class="post-browser">
+    <div id="post-browser">
      <ul>
         {% for post in site.posts %}
           <li><a {% if page.url == post.url %}class="active"{% endif %} href="{{ post.url }}">{{ post.title }}</a></li>
@@ -25,6 +45,7 @@
             <li><a href="http://rhizome.org/" target="_blank">Rhizome</a></li>
         </ul>
     </nav>
+    <div id="column-container">
     <div id="column1"></div>
     <div id="column2">
         <div id="content">
@@ -34,6 +55,7 @@
             {{ content }}
         </div>
     </div>
+  </div>
 
 <!--   <footer id="footer">
     <p class="copyright">Copyright &copy; {{ site.time | date: '%Y' }} {{ site.org }}. Powered by <a href="http://jekyllrb.com">Jekyll</a></p>
