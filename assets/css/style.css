@@ -21,10 +21,14 @@ a, a:visited {
     text-decoration: none; 
 }
 
-ul, li {
+ol, ul, li {
     list-style: none;
     margin: 0;
     padding: 0;
+}
+
+ol, ul {
+    margin: 0 0 25px 25px;
 }
 
 ol li {
@@ -78,6 +82,12 @@ article div.no-border {
     color: white;
 }
 
+@media (max-width: 912px) {
+  #post-browser {
+    display: none;
+  }
+}
+
 /*** content ***/
 
 #column-container {
@@ -91,12 +101,24 @@ article div.no-border {
     height: 500px;
 }
 
+@media (max-width: 912px) {
+    #column1 {
+        width: 0;
+    }
+}
+
 #column2 {
     height: 100%;
     overflow: hidden;
     max-width: 1000px;
     margin-bottom: 50px;
     padding: 0 114px;
+}
+
+@media (max-width: 912px) {
+    #column2 {
+        padding: 0;
+    }
 }
 
 #content {
@@ -200,6 +222,25 @@ nav {
     text-align: right;
 }
 
+@media (max-width: 912px) {
+    nav {
+        position: absolute;
+        left: 10px;
+        margin: 0;
+        width: 400px;
+        text-align: left;
+    }
+
+    nav ul {
+        margin: 0;
+    }
+
+    nav li {
+        margin-left: 10px;
+        display: inline-block;
+    }
+}
+
 nav a {
     font-weight: bold;
     font-size: 18px;
@@ -216,22 +257,25 @@ nav a:hover:not(.active) {
 
 /*** logo ***/
 
-nav li:last-child a {
-    position: relative;
-    left: 7px;
-    font-family: RHIZOME, sans-serif;
-    font-size: 27px;
-    color: white;
-    background: #cfcfcf;
-    padding-top: 3px;
-    margin-top: 20px;
-    width: 112px;
-    height: 32px;
-    text-align: center;
-    text-transform: uppercase;
+@media (min-width: 913px) {
+    nav li:last-child a {
+        position: relative;
+        left: 7px;
+        font-family: RHIZOME, sans-serif;
+        font-size: 27px;
+        color: white;
+        background: #cfcfcf;
+        padding-top: 3px;
+        margin-top: 20px;
+        width: 112px;
+        height: 32px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    nav li:last-child a:hover {
+        color: white;
+        background: black;
+    }
 }
 
-nav li:last-child a:hover {
-    color: white;
-    background: black;
-}
