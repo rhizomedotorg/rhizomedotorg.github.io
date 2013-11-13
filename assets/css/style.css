@@ -28,8 +28,8 @@ ol, ul, li {
     padding: 0;
 }
 
-ol, ul {
-    margin: 0 0 25px 25px;
+article ol, article ul {
+    margin: 0 0 2em 2em;
 }
 
 ol li {
@@ -175,7 +175,7 @@ article {
 }
 
 article p {
-    margin: 0 0 25px 0;
+    margin: 0 0 2em 0;
 }
 
 article h2 {
@@ -203,7 +203,7 @@ article .byline {
     text-align: center;
     font-size: 14px;
     line-height: 24px;
-    margin: 2px 0 25px 0;
+    margin: 2px 0 2em 0;
 }
 
 @media (max-width: 926px) {
@@ -224,7 +224,7 @@ article .img-box {
     width: 596px;
     text-align: center;
     border: 1px solid #cfcfcf;
-    margin-bottom: 25px;
+    margin-bottom: 2em;
 }
 
 @media (max-width: 926px) {
@@ -243,7 +243,7 @@ article img {
 
 @media (max-width: 926px) {
     article img {
-        margin-bottom: 25px;
+        margin-bottom: 2em;
     }
 }
 
