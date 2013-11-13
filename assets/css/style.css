@@ -70,20 +70,18 @@ article div.no-border {
     padding: 8px 9px;
 }
 
+#post-browser ul {
+    position: relative;
+}
+
 #post-browser li:first-child {
     margin-left: 36px;
 }
 
 #post-browser li:last-child {
-    position: fixed;
+    position: absolute;
     right: 0;
     top: 1px;
-}
-
-@media (max-width: 926px) {
-    #post-browser li:last-child {
-        position: static;
-    }
 }
 
 #post-browser a.active {
@@ -207,6 +205,12 @@ article .byline {
     margin: 2px 0 25px 0;
 }
 
+@media (max-width: 926px) {
+    article {
+        padding: 0 10px;
+    }
+}
+
 article a {
     text-shadow: 0px 0px 0px rgba(255, 255, 255, 0.4);
 }
@@ -234,6 +238,12 @@ article img {
     margin: 0 auto;
     padding: 6px 0;
     max-width: 100%;
+}
+
+@media (max-width: 926px) {
+    article img {
+        margin-bottom: 25px;
+    }
 }
 
 article .caption {
