@@ -267,7 +267,10 @@ nav {
 @media (max-width: 926px) {
     nav {
         position: static;
+        margin-left: 0;
         margin-top: 60px;
+        width: 100%;
+        text-align: center;
     }
 }
 
@@ -302,8 +305,13 @@ nav li:last-child a {
     text-transform: uppercase;
 }
 
+@media (max-width: 926px) {
+    nav li:last-child a {
+        left: 0;
+    }
+}
+
 nav li:last-child a:hover {
     color: white;
     background: black;
 }
-
