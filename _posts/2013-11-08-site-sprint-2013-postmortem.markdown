@@ -29,7 +29,7 @@ So we used this alternative series of steps:
 2. Edit files there
 3. Deploy changes
 
-To make step 3 simple enough, I threw together a webapp consisting of a single “Deploy” button the night before, my first foray into Aaron Shwartz's [web.py](http://webpy.org/philosophy). Additionally, a document was shared on how to use GitHub to browse repos, edit files and track issues (props to GitHub for making this all very accessible).
+To make step 3 simple enough, I threw together a webapp consisting of a single “Deploy” button the night before, my first foray into Aaron Swartz's [web.py](http://webpy.org/philosophy). Additionally, a document was shared on how to use GitHub to browse repos, edit files and track issues (props to GitHub for making this all very accessible).
 
 {% include image.html url="/assets/img/screenshot-deploy-btn.png" %}
 
