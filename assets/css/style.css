@@ -36,6 +36,11 @@ ol li {
     list-style: decimal;
 }
 
+pre {
+    font-size: 12px;
+    white-space: pre-wrap;
+}
+
 article div.no-border {
     border: none;
 }
