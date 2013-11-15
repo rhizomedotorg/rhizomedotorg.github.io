@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Database-Less, Data-Driven Navigation"
+title: "Database-less, Data-driven Navigation"
 date: 2013-11-15
 author: "Scott"
 ---
