@@ -56,7 +56,7 @@ and for top level-pages:
 {{ "{% get_nav 'Rhizome' None " }}%}
 {% endhighlight %}
 
-And now the implimentation. We create the file /path-to-project/myapp/templatetags/nav_tags.py
+And now the implementation. We create the file /path-to-project/myapp/templatetags/nav_tags.py
 
 {% highlight python %}
 from django import template
@@ -82,7 +82,7 @@ def get_nav(context, section_name, sub_section_name):
 
 This adds to the template context everything needed to render the navigation properly, making it possible to highlight the current primary and sub items, or perform some other logic based on the navigation state. 
 
-Finally, let's do the navigation template: /path-to-project/templtaes/fragments/navbars.html
+Finally, let's do the navigation template: /path-to-project/templates/fragments/navbars.html
 
 {% highlight html+django %}
 <div id="header" class="navbar">
@@ -102,4 +102,4 @@ Finally, let's do the navigation template: /path-to-project/templtaes/fragments/
 </div>
 {% endhighlight %}
 
-It's common to automate active navigation by comparing the path of the request to a nav item's href, but again with the [PEP 20](http://www.python.org/dev/peps/pep-0020/), explicit is better than implicit. Passing navigation state explicitely to our get_nav template tag removes the need for such cleverness (who wants their navigation state bound to URLs?) Which is good, becuase navs tend to change constantly.
+It's common to automate active navigation by comparing the path of the request to a nav item's href, but again with the [PEP 20](http://www.python.org/dev/peps/pep-0020/), explicit is better than implicit. Passing navigation state explicitly to our get_nav template tag removes the need for such cleverness (who wants their navigation state bound to URLs?) Which is good, because navs tend to change constantly.
