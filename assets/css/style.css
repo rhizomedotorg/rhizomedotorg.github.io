@@ -36,11 +36,6 @@ ol li {
     list-style: decimal;
 }
 
-pre {
-    font-size: 12px;
-    white-space: pre-wrap;
-}
-
 article div.no-border {
     border: none;
 }
@@ -74,6 +69,7 @@ article div.no-border {
     display: block;
     color: #cfcfcf;
     padding: 8px 9px;
+    white-space: nowrap;
 }
 
 #post-browser ul {
@@ -179,8 +175,16 @@ article {
     padding: 0;
 }
 
-article p {
+article p, article pre {
     margin: 0 0 2em 0;
+}
+
+article pre {
+    font-size: 12px;
+    white-space: pre-wrap;
+    border-top: 1px solid #cfcfcf;
+    border-bottom: 1px solid #cfcfcf;
+    padding: 6px 10px;
 }
 
 article h2 {

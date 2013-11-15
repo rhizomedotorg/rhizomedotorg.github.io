@@ -5,14 +5,16 @@ title: "Database-Less, Data-Driven Navigation"
 author: "Scott"
 ---
 
-Rhizome.org used to have a page directory in the footer, breadcrumbs on certain pages, a primary and secondary nav articulated via dropdowns, and a topbar for user account and social media links. As of this month, no more! We've introduced a pair of sticky black bars. 
+[Rhizome.org](http://rhizome.org/) used to have a page directory in the footer, breadcrumbs on certain pages, a primary and secondary nav articulated via dropdowns, and a topbar for user account and social media links. As of this month, no more! We've introduced a pair of sticky black bars. 
 
 {% include image.html url="/assets/img/tryout4.png" %}
 {% include image.html url="/assets/img/tryout5.png" %}
 
-It's very interesting the constraints which brought about this particular design, but this post is more about what's been changed under the hood. What follows is a tutorial on how to build a database-less, data-driven navigation in Python/Django. This is valuable because the design is very simple, and making future modifications is very easy. Simpler and easier than a database-backed CMS I promise. Disclaimer: the code listed here may not accommodate any and all navigational structures.
+It's very interesting the constraints which brought about this particular design, but this post is more about what's been changed under the hood. What follows is a tutorial on how to build a database-less, data-driven navigation in Python/Django. This design is simple and flexible, qualities not shared by database-backed navigation CMSs. Disclaimer: the code listed here does not accommodate any and all navigational structures.
 
-Here's the crux, the data file which lives at /path-to-project/myapp/nav.py.
+<!--more-->
+
+Here's the crux, a data file which lives at /path-to-project/myapp/nav.py.
 
 {% highlight python %}
 from django.core.urlresolvers import reverse
@@ -35,11 +37,13 @@ SUB_NAV = {
 }
 {% endhighlight %}
 
-There could be a single, monolithic data structure instead of these two here, but the above seems flatter, and therefor better (see [PEP 20](http://www.python.org/dev/peps/pep-0020/)).
+There could be a single, monolithic data structure instead of these two, but the above seems flatter, and therefor better (see [PEP 20](http://www.python.org/dev/peps/pep-0020/)).
 
-Unlike dropdowns, our secondary nav only shows items belonging to one parent at a time. Let's invent a template tag to render the navigation differently, depending on some params passed in from the template. We'll use it like this:
+Unlike with dropdown menus, our secondary nav only shows items belonging to one parent at a time. Let's invent a template tag to render the navigation differently, depending on the params passed to it. We'll use it like this:
 
 {% highlight django %}
+{{ "{% load nav_tags " }}%}
+
 {{ "{% block navbars " }}%}
     {{ "{% get_nav 'Journal' 'Best of' " }}%}
 {{ "{% endblock " }}%}
@@ -48,12 +52,10 @@ Unlike dropdowns, our secondary nav only shows items belonging to one parent at 
 and for top level-pages:
 
 {% highlight django %}
-{{ "{% block navbars " }}%}
-    {{ "{% get_nav 'Rhizome' None " }}%}
-{{ "{% endblock " }}%}
+{{ "{% get_nav 'Rhizome' None " }}%}
 {% endhighlight %}
 
-And the implimentation at /myapp/templatetags/nav_tags.py
+And now the implimentation. This file lives at /path-to-project/myapp/templatetags/nav_tags.py
 
 {% highlight python %}
 from django import template
@@ -77,8 +79,9 @@ def get_nav(context, section_name, sub_section_name):
     }
 {% endhighlight %}
 
-<!--more-->
-This puts everything in the context needed to render the navigation properly, making it possible to highlight the current primary and sub nav titles and all that jazz. What the source of fragments/navbars.html looks like will very greatly depending on your project. Ours is basically this: 
+This adds to the context everything needed to render the navigation properly, making it possible to highlight the current primary and sub items, or perform other logic based on the navigation state. 
+
+/path-to-project/templtaes/fragments/navbars.html might look like this: 
 
 {% highlight html+django %}
 <div id="header" class="navbar">
@@ -98,4 +101,4 @@ This puts everything in the context needed to render the navigation properly, ma
 </div>
 {% endhighlight %}
 
-It's common to automate active navigation by comparing the path of the request to the href of items in the nav, but again with the PEP 20, explicit is better than implicit. By passing that information explicitely from your temapltes, no such cleverness is required. That's the magic of this solution, it allows that kind of fine-grained control, while removing the need to repeat any HTML. Which is good when it comes to developing navs, becuase they tend to change constantly.
+It's common to automate active navigation by comparing the path of the request to a nav item's href, but again with the [PEP 20](http://www.python.org/dev/peps/pep-0020/), explicit is better than implicit. Passing navigation state explicitely to our get_nav template tag removes the need for such cleverness (who wants their navigation state bound to URLs?). Which is good, becuase navs tend to change constantly.
