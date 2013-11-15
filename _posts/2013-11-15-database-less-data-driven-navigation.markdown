@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Database-Less, Data-Driven Navigation"
-#date: 2013-11-08
+date: 2013-11-15
 author: "Scott"
 ---
 
