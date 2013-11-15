@@ -10,7 +10,7 @@ author: "Scott"
 {% include image.html url="/assets/img/tryout4.png" %}
 {% include image.html url="/assets/img/tryout5.png" %}
 
-It's very interesting the constraints which brought about this particular design, but this post is more about what's been changed under the hood. What follows is a tutorial on how to build a database-less, data-driven navigation in Python/Django. This design is simple and flexible, qualities not shared by database-backed navigation CMSs. Disclaimer: the code listed here does not accommodate any and all navigational structures.
+It's very interesting the constraints which brought about this particular design, but this post is more about what's been changed under the hood. What follows is a tutorial on how to build a database-less, data-driven navigation in Python/[Django](https://www.djangoproject.com/). This design is simple and flexible, qualities not shared by database-backed navigation. Disclaimer: the code listed here does not accommodate any and all navigational structures.
 
 <!--more-->
 
@@ -55,7 +55,7 @@ and for top level-pages:
 {{ "{% get_nav 'Rhizome' None " }}%}
 {% endhighlight %}
 
-And now the implimentation. This file lives at /path-to-project/myapp/templatetags/nav_tags.py
+And now the implimentation. We create the file /path-to-project/myapp/templatetags/nav_tags.py
 
 {% highlight python %}
 from django import template
@@ -79,9 +79,9 @@ def get_nav(context, section_name, sub_section_name):
     }
 {% endhighlight %}
 
-This adds to the context everything needed to render the navigation properly, making it possible to highlight the current primary and sub items, or perform other logic based on the navigation state. 
+This adds to the template context everything needed to render the navigation properly, making it possible to highlight the current primary and sub items, or perform some other logic based on the navigation state. 
 
-/path-to-project/templtaes/fragments/navbars.html might look like this: 
+Finally, let's do the navigation template: /path-to-project/templtaes/fragments/navbars.html
 
 {% highlight html+django %}
 <div id="header" class="navbar">
@@ -101,4 +101,4 @@ This adds to the context everything needed to render the navigation properly, ma
 </div>
 {% endhighlight %}
 
-It's common to automate active navigation by comparing the path of the request to a nav item's href, but again with the [PEP 20](http://www.python.org/dev/peps/pep-0020/), explicit is better than implicit. Passing navigation state explicitely to our get_nav template tag removes the need for such cleverness (who wants their navigation state bound to URLs?). Which is good, becuase navs tend to change constantly.
+It's common to automate active navigation by comparing the path of the request to a nav item's href, but again with the [PEP 20](http://www.python.org/dev/peps/pep-0020/), explicit is better than implicit. Passing navigation state explicitely to our get_nav template tag removes the need for such cleverness (who wants their navigation state bound to URLs?) Which is good, becuase navs tend to change constantly.
