@@ -1,16 +1,17 @@
 ---
 layout: post
 title: "Database-less, Data-driven Navigation"
+description: "A tutorial on building database-less, data-driven navigations in Python/Django."
 date: 2013-11-15
 author: "Scott"
 ---
 
 [Rhizome.org](http://rhizome.org/) used to have a page directory in the footer, breadcrumbs on certain pages, a primary and secondary nav articulated via dropdowns, and a topbar for user account and social media links. As of this month, no more! We've introduced a pair of sticky black bars. 
 
-{% include image.html url="/assets/img/tryout4.png" %}
-{% include image.html url="/assets/img/tryout5.png" %}
+{% include image.html url="/assets/img/rhizome_header.png" %}
+{% include image.html url="/assets/img/rhizome_footer.png" %}
 
-It's very interesting the constraints which brought about this particular design, but this post is more about what's been changed under the hood. What follows is a tutorial on how to build a database-less, data-driven navigation in Python/[Django](https://www.djangoproject.com/). This design is simple and flexible, qualities not shared by database-backed navigation. Disclaimer: the code listed here does not accommodate any and all navigational structures.
+It's very interesting the constraints which brought about this particular design, but this post is more about what's been changed under the hood. What follows is a tutorial on building database-less, data-driven navigations in Python/[Django](https://www.djangoproject.com/). This design is simple and flexible, qualities not shared by database-backed navigation. Disclaimer: the code listed here does not accommodate any and all navigational structures.
 
 <!--more-->
 

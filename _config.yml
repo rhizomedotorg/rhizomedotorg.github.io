@@ -1,5 +1,6 @@
 name: Rhizome Labs
 url: http://labs.rhizome.org 
+description: "A byproduct of Rhizome.org, a collection of insights about software development, a resource for technolgists working in arts and cultural institutions."
 
 paginate: 5
 pygments: true

@@ -3,6 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ page.title }}</title>
+
+    {% if page.description %}
+      {% assign description = page.description %}
+    {% else %}
+      {% assign description = site.description %}
+    {% endif %}
+
+    <meta name="description" content="{{ description }}">
     <meta name="format-detection" content="telephone=no">
 
     <meta name="twitter:card" content="summary">
@@ -11,8 +19,10 @@
     <meta content="{{ site.name }}" property="og:site_name">
     <meta content="{{ page.title }}" property="og:title">
     <meta content="{% if page.website %}website{% else %}article{% endif %}" property="og:type">
-    <meta content="{{ site.description }}" property="og:description">
+    <meta content="{{ description }}" property="og:description">
     <meta content="{{ site.url }}{% if page.url != '/index.html' %}{{ page.url }}{% endif %}" property="og:url">
+
+    <meta content="{{ site.url }}/assets/img/rhizome_labs_placeholder.png" property="og:image">
 
     <meta name="viewport" content="width=device-width, maximum-scale=1.0, initial-scale=1.0">
 
@@ -26,7 +36,7 @@
         {% for post in site.posts %}
           <li><a {% if page.url == post.url %}class="active"{% endif %} href="{{ post.url }}">{{ post.title }}</a></li>
         {% endfor %}
-        <li><a href="/archive"><img src="/assets/img/arrow.png" alt="More" /></a></li> 
+        <li><a href="/archive"><img src="/assets/img/green_arrow.png" alt="More" /></a></li> 
       </ul>
     </div>
     <nav>
@@ -42,7 +52,7 @@
     <div id="column2">
         <div id="content">
             <h1><a href="/">{{ site.name }}</a></h1>
-            <img class="dinkus" src="/assets/img/lab.png" />
+            <img class="dinkus" src="/assets/img/green_test_tube_icon.png" />
 
             {{ content }}
         </div>

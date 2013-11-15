@@ -8,4 +8,4 @@ Flexibility and experimentation are paramount at [Rhizome](http://rhizome.org/ab
 
 Rhizome is a nonprofit deeply rooted in artistic practices that engage with technology. Since 1996, our website has provided a platform for these activities. Our offices are located within the New Museum of Contemporary Art in NYC.
 
-{% include image.html url="/assets/img/animation.gif" %}
+{% include image.html url="/assets/img/rhizome.gif" %}
