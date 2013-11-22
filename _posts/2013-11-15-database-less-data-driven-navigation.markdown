@@ -53,7 +53,7 @@ Unlike with dropdown menus, our secondary nav only shows items belonging to one 
 and for top level-pages:
 
 {% highlight django %}
-{{ "{% get_nav 'Rhizome' None " }}%}
+{{ "{% get_nav 'Journal' None " }}%}
 {% endhighlight %}
 
 And now the implementation. We create the file /path-to-project/myapp/templatetags/nav_tags.py
