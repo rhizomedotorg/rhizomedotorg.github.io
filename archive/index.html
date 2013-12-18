@@ -10,7 +10,7 @@ website: true
     {% endunless %}
     
     <article class="archive">
-        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <h2><a href="{% if post.external-url %}{{ post.external-url }}{% else %}{{ post.url }}{% endif %}">{{ post.title }}</a></h2>
         <div class="byline">{{ post.date | date: "%m / %d / %Y" }}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;by {{ post.author }}</div>
     </article>
 {% endfor %}

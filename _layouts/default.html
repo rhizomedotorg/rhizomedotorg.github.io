@@ -34,7 +34,10 @@
     <div id="post-browser">
      <ul>
         {% for post in site.posts %}
-          <li><a {% if page.url == post.url %}class="active"{% endif %} href="{{ post.url }}">{{ post.title }}</a></li>
+          {% if post.external-url %}
+          {% else %}
+            <li><a {% if page.url == post.url %}class="active"{% endif %} href="{{ post.url }}">{{ post.title }}</a></li>
+          {% endif %}
         {% endfor %}
         <li><a href="/archive"><img src="/assets/img/green_arrow.png" alt="More" /></a></li> 
       </ul>
