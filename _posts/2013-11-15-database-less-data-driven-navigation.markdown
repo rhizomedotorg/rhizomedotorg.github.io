@@ -11,9 +11,7 @@ author: "Scott"
 {% include image.html url="/assets/img/rhizome_header.png" %}
 {% include image.html url="/assets/img/rhizome_footer.png" %}
 
-It's very interesting the constraints which brought about this particular design, but this post is more about what's been changed under the hood. What follows is a tutorial on building database-less, data-driven navigations in Python/[Django](https://www.djangoproject.com/). This design is simple and flexible, qualities not shared by database-backed navigation. Disclaimer: the code listed here does not accommodate any and all navigational structures.
-
-<!--more-->
+It's very interesting the constraints which brought about this particular design, but this post is more about what's been changed under the hood. What follows is a tutorial on building database-less, data-driven navigations in Python/[Django](https://www.djangoproject.com/). This design is simple and flexible, qualities not shared by database-backed navigation.<!--more--> Disclaimer: the code listed here does not accommodate any and all navigational structures.
 
 Here's the crux, a data file which lives at /path-to-project/myapp/nav.py.
 

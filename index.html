@@ -15,7 +15,7 @@ website: true
 
         {% if post.external-url %}
         {% else %}
-            {{ post.content }}
+            {{ post.excerpt }} <a href="{{ post.url }}">Read...</a><br/ ><br />
             <a href="{{ post.url }}#disqus_thread"></a>
         {% endif %}
     </article>

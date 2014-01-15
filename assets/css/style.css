@@ -230,6 +230,7 @@ article a:hover {
 }
 
 article .img-box {
+    display: block;
     width: 596px;
     text-align: center;
     border: 1px solid #cfcfcf;
@@ -261,6 +262,7 @@ article .caption {
     margin-left: 20px;
     font-size: 12px;
 }
+
 /*** nav ***/
 
 nav {
