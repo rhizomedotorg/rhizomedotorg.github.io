@@ -8,7 +8,7 @@ author: "Scott"
 
 I'm at PyCon US 2014 in Montréal (a contradiction, right?). Good Pythonistas relish the opportunity to re-join the pack. I'm seated in a row near the front, in a rare mood to look up tutorials for Emacs Org mode. Maybe this year, I'll make that leap to a text editor for grown ups.
 
-A lot is different since Atlanta's 2011 conference, that was my first time. For one, the tech company booths are so much more sophisticated with their branded pre-fab installations, couches, quirky robots and endless supplies of free gadgets. Some tables and foamcore posters would have sufficed. A long-shot from 2011, with its folding tables and foamcore posters, which resembled the poster sessions of academia. The truly nerdy attendees look a little lost. But I'm not reading into it that much, I let my inner net-skeptic go to sleep.
+A lot is different since Atlanta's 2011 conference, that was my first time. For one, the tech company booths are so much more sophisticated with their branded pre-fab installations, couches, quirky robots and endless supplies of free gadgets. A long-shot from 2011, with its folding tables and foamcore posters, which resembled the poster sessions of academia. The truly nerdy attendees look a little lost. But I'm not reading into it that much, I let my inner net-skeptic go to sleep.
 
 {% include image.html url="/assets/img/pycon/rackspace.jpg" %}
 {% include image.html url="/assets/img/pycon/oreilly.JPG" %}
