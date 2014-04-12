@@ -15,7 +15,7 @@ A lot is different since Atlanta's 2011 conference, that was my first time. For 
 
 <!--more-->
 
-From Alex Gaynor's talk [Pickles are for Delis, not Software](https://speakerdeck.com/pycon2014/pickles-are-for-delis-not-for-software-by-alex-gaynor), I learned that [pickle](https://docs.python.org/dev/library/pickle.html), from Python's standard library, is actually a stack machine. When an object is serialized via pickle, what's actually being saved is the instruction set to recreate that object. This is a very different approach than what's used with msgpack or JSON. And ultimately, is disadvantageous according to Alex.
+From Alex Gaynor's talk [Pickles are for Delis, not Software](https://speakerdeck.com/pycon2014/pickles-are-for-delis-not-for-software-by-alex-gaynor), I learned that [pickle](https://docs.python.org/dev/library/pickle.html), from Python's standard library, is actually a stack machine. When an object is serialized via pickle, what's actually being saved is the instruction set to recreate that object. This is a very different approach than what's used with msgpack or JSON, And ultimately, is disadvantageous according to Alex.
 
 John Perry Barlow, founder of the Electronic Frontier Foundation, said in his charismatic keynote, "there's something naturally liberating about the internet", and that he detests the "generification of everything", as do I. But his perception of the Python community seemed a little off. We're important because we're "building the plumbing", he said. I think that metaphor doesn't speak truly to role of software in modern-day infrastructure. To understand this relationship, you must read Rhizome articles religiously for the next two years.
 
