@@ -10,8 +10,8 @@ I'm at PyCon US 2014 in Montréal (a contradiction, right?). Good Pythonistas re
 
 A lot is different since Atlanta's 2011 conference, that was my first time. For one, the tech company booths are so much more sophisticated, having professionally-fabricated walls and multi-media displays. A long-shot from the foamcore stylings of the past, which resembled the poster sessions of academia. But I'm not reading into it that much, I let my inner net-skeptic go to sleep.
 
-{% include image.html url="/assets/img/pycon/rackspace.JPG" %}
-{% include image.html url="/assets/img/pycon/oreilly.JPG" %}
+{% include image.html url="/assets/img/pycon/rackspace.jpg" %}
+{% include image.html url="/assets/img/pycon/oreilly.jpg" %}
 
 <!--more-->
 
@@ -23,4 +23,4 @@ Everyone should check out Gary Bernhardt's talk [The Death of JavaScript](https:
 
 I'm really looking forward to [It's Dangerous to Go Alone: Battling the Invisible Monsters in Tech](https://us.pycon.org/2014/schedule/presentation/164/). I'll be back tomorrow with more recap.
 
-{% include image.html url="/assets/img/pycon/pyconhacker.JPG" %}
+{% include image.html url="/assets/img/pycon/pyconhacker.jpg" %}
