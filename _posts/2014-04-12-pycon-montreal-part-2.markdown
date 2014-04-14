@@ -11,6 +11,7 @@ author: "Scott"
 {% include image.html url="/assets/img/pycon/dj.jpg" %}
 
 Ad poster. DJ stands for Dow Jones.
+<!--more-->
 
 {% include image.html url="/assets/img/pycon/lonely.jpg" %}
 
