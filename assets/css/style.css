@@ -326,3 +326,16 @@ nav li:last-child a:hover {
     color: white;
     background: black;
 }
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    margin: 0 0 2em 0;
+}
+
+th, td {
+    border: 2px solid #ccc;
+    padding: 5px;
+    background: pink;
+}
