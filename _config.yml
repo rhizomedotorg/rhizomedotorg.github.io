@@ -3,7 +3,7 @@ url: http://labs.rhizome.org
 description: "A collection of insights on software development and the role of web technology at cultural institutions. A byproduct of Rhizome."
 
 paginate: 5
-pygments: true
+highlighter: pygments
 
 exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
 timezone: America/New_York
