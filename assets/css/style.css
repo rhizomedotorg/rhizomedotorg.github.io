@@ -9,6 +9,14 @@
     font-style: normal;
 }
 
+/* http://css-tricks.com/snippets/css/prevent-superscripts-and-subscripts-from-affecting-line-height/ */
+sup, sub {
+   vertical-align: baseline;
+   position: relative;
+   top: -0.4em;
+}
+sub { top: 0.4em; }
+
 body, html {
     margin: 0;
     font-family: 'Helvetica Neue', sans-serif;
@@ -335,7 +343,11 @@ table {
 }
 
 th, td {
-    border: 2px solid #ccc;
+    border: 1px solid #cfcfcf;
     padding: 5px;
-    background: pink;
+}
+
+thead tr,
+tbody tr:nth-of-type(even) {
+    background: rgb(226, 230, 235);
 }

@@ -6,18 +6,17 @@ date: 2014-07-30
 author: "Scott"
 ---
 
-*Opening the Kimono* was performed by Frances Stark and David Kravitz at Rhizome's Seven on Seven Conference this year. The audience watched a projection of David's screen as he chatted with Frances in the Messages app for Mac (known as iChat up until 2012). Later we kicked ourselves for not capturing David's screen during the performance. The documentation we do have consists of [this video](http://vimeo.com/96086719) and an .ichat log file--which David kindly provided. This post is about my attempt to playback *Opening the Kimono* from the log file, with correct timing using AppleScript. For context about the piece *Opening the Kimono*, [check out this article](http://rhizome.org/editorial/2014/jul/29/opening-kimono/) on Rhizome.
+{% include image.html url="/assets/img/AppleScript_Logo.jpg" %} 
 
-<!---{% include image.html url="/assets/img/pycon/dj.jpg" %}
+The audience at Seven on Seven watched a projection of David Kravitz's screen as he chatted with Frances Stark in the Messages app for Mac (known as iChat up until 2012). This was their performance *Opening the Kimono*, a highlight of the conference. Later we kicked ourselves for not capturing David's screen during the performance. Our documentation consists of [this video](http://vimeo.com/96086719) and an .ichat log file--which David kindly provided. This post is about playing back *Opening the Kimono* from the log in real-time using AppleScript. For context about the piece, see [this article](http://rhizome.org/editorial/2014/jul/29/opening-kimono/) on Rhizome.
 
-Ad poster. DJ stands for Dow Jones.-->
 <!--more-->
 
-What does one get when opening a chat log in Messages? Pretty pastel chat bubbles. But this format is not so easy to parse[^1]. To wrangle this, there is the software [Logorrhea](http://spiny.com/logorrhea/) which, unnervingly, was last updated in 2006. Logorrhea exports iChat logs as text files with a line per message.[^2]
+What does one get when opening a chat log in Messages? Pretty pastel chat bubbles. But this format is not so easy to parse[^1]. To wrangle the log file, I used the beautifully-named software [Logorrhea](http://spiny.com/logorrhea/). Logorrhea exports iChat logs as text files.[^2] The first line looks like:
 
 <pre>SevenOnSevenFrancesStarkDavidKravitz	dnkravitz@gmail.com	05/03/2014	16:57:43	hi frances!</pre>
 
-This looks suspiciously like TSV (Tab-Separated Values) and by changing the extension to .tsv, spreadsheet programs, such as LibreOffice Calc, will gladly open it:
+The above looks odly like TSV (Tab-Separated Values). By changing the extension to .tsv, spreadsheet programs will happily open it, yielding something like:
 
 |A|B|C|D|E|
 |-|-|-|-|-|
@@ -25,7 +24,7 @@ This looks suspiciously like TSV (Tab-Separated Values) and by changing the exte
 |SevenOnSevenFrancesStarkDavidKravitz|francesstark@me.com|05/03/2014|16:57:49|well hello David!|
 |...|...|...|...|...|
 
-What's missing is the time elapsed (delay) between messages. Spreadsheet wizards can find it using Calc, but Python is my multi-tool. Here's a snippet for finding the delay in seconds between messages:
+I'm no spreadsheet wizard, so to find the time elapsed between messages I'll use Python's datetime module.
 
 {% highlight python %}
 >>> import datetime
@@ -39,7 +38,8 @@ What's missing is the time elapsed (delay) between messages. Spreadsheet wizards
 >>>
 {% endhighlight %}
 
-Drunk off the feeling this gives me, I decide to convert the data into a native AppleScript data type--I don't want to parse anything in AppleScript, ever. Python's built-in CSV module is perfectly capable of parsing TSV, and with some clever string formatting, one can convert the rows of data into a string containing an AppleScript list of lists, which can just be plopped into an AppleScript source file.
+But what I really want is to convert the log data into a native AppleScript data type--I don't want to parse anything in AppleScript, ever. Python's built-in CSV module can parse TSV as well, and with some clever string formatting, one can convert the rows of data into an AppleScript list of lists, which can later be plopped into an AppleScript source file. Here is
+code to do this:
 
 {% highlight python %}
 {% raw %}
@@ -64,20 +64,19 @@ for idx, row in enumerate(row_buffer):
                  - datetime.datetime.strptime(row[3], '%H:%M:%S')).seconds
     except IndexError:
         delta = 0
-    output.append('{{"{}",{},"{}"}}'.format(row[1], delta, row[4].rstrip('\n')))
+    output.append('{{"{}",{},"{}"}}'.format(row[1].split('@')[0], delta, row[4].rstrip('\n')))
 
 print '{' + ', '.join(output) + '}'
 {% endraw %}
 {% endhighlight %}
 
-AppleScript allows OS level automation for programs that impliment the interface for it (lots do, which makes it very useful). The goal is to automate two chat clients (iChat and Adium) to perform the chat:
+A subset of the output:
+
+<pre>{% raw %}{{"dnkravitz", 6, "hi frances!"}, {"francesstark", 8, "well hello David!"}, {"dnkravitz", 30, "how’s it going?"}, {"francesstark", 9, "I’m feeling more than a little excited about much of what we discussed yesterday"}, {"dnkravitz", 17, "yeah me too"}, {"dnkravitz", 4, "we should start by telling the audience a bit about the start of this whole thing"}, {"dnkravitz", 15, "namely"}, {"dnkravitz", 6, "i had a friend who suggested that we do performance art"}, {"dnkravitz", 6, "well, what he called performance art"}, {"francesstark", 52, "hahahhaha"}}{% endraw %}</pre>
+
+AppleScript allows OS level automation for programs that impliment the interface for it (most do, which makes it very useful).[^3] To fake the conversation, two chat clients (iChat and Adium) are automated to talk to each other. In the following code sample, let's pretend I've already assigned all the output from the above into a variable called *theBigList*.
 
 {% highlight applescript %}
-{% raw %}
-
-set theBigList to {{"dnkravitz", 6, "hi frances!"}, {"francesstark", 8, "well hello David!"}, {"dnkravitz", 30, "how’s it going?"}, {"francesstark", 9, "I’m feeling more than a little excited about much of what we discussed yesterday"}, {"dnkravitz", 17, "yeah me too"}, {"dnkravitz", 4, "we should start by telling the audience a bit about the start of this whole thing"}, {"dnkravitz", 15, "namely"}, {"dnkravitz", 6, "i had a friend who suggested that we do performance art"}, {"dnkravitz", 6, "well, what he called performance art"}, {"francesstark", 52, "hahahhaha"},...}
-{% endraw %}
-
 repeat with i from 1 to count of theBigList
        set theLine to items of item i of theBigList
        set theSender to item 1 of theLine
@@ -96,15 +95,17 @@ repeat with i from 1 to count of theBigList
 		send the active chat message theMessage
 	   end tell
 	end if
-								      
+	
 	delay theDelay
 end repeat
 {% endhighlight %}
 
-Rhizome didn't end up using this method to document the chat because in the resulting screen capture, you cannot see messages being typed into the input box before they are sent. And even if this was scripted succesfully, the rhythm of the typing, puases for comprehension and other subtleties of the performance were never present in the log file to begin with.
+After all that work, we (Rhizome) ended up just manually recreating the performance with human actors. Why? With the automated method, one cannot see messages being typed into the message box before they are sent. Even though it is possible to simulate this typing with AppleScript, the rhythm of the typing, the puases for comprehension and other subtleties of the performance are not present in the log file. Any further attempt would be a mini Turing Test, where a bot must be programmed to type in such a way as to fool us into believing it is David Kravitz. I did however re-use much of this code to create a script for the human actors which included timing cues.
 
-This presents a Turing Test kind of problem, where a bot must be programmed to type in such a way as to fool us into believing it is David Kravitz. It was so much easier to re-enact *Opening the Kimono* with human actors. For me, a slight catharsis came in that we were able to re-use this code to write the script for the actors, which included timing cues.
+**Footnotes**
 
 [^1]: It could be done using AppleScript to scrape data off of the native Mac UI.
 
 [^2]: If one has access to the computer on which the chat occured, there is a sqlite3 database of messages at ~/Library/Messages/chat.db. Also Adium is capable of converting .ichat logs to XML format.
+
+[^3]: A most incredible thing about AppleScript are the "scripting dictionaries". From Script Editor, go to  File > Open Dictionary to view a list of scriptable applications on one's computer. From here view complete documentation for the scripting interface of each application. 
