@@ -252,7 +252,7 @@ article .img-box {
     }
 }
 
-article img {
+article img, article video {
     display: block;
     margin: 0 auto;
     padding: 6px 0;
@@ -260,7 +260,7 @@ article img {
 }
 
 @media (max-width: 926px) {
-    article img {
+    article img, article video {
         margin-bottom: 2em;
     }
 }

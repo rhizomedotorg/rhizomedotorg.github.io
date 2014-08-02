@@ -16,7 +16,7 @@ What does one get when opening a chat log in Messages? Pretty pastel chat bubble
 
 <pre>SevenOnSevenFrancesStarkDavidKravitz	dnkravitz@gmail.com	05/03/2014	16:57:43	hi frances!</pre>
 
-The above looks odly like TSV (Tab-Separated Values). By changing the extension to .tsv, spreadsheet programs will happily open it, yielding something like:
+The above looks oddly like TSV (Tab-Separated Values). By changing the extension to .tsv, spreadsheet programs will happily open it, yielding something like:
 
 |A|B|C|D|E|
 |-|-|-|-|-|
@@ -24,7 +24,7 @@ The above looks odly like TSV (Tab-Separated Values). By changing the extension 
 |SevenOnSevenFrancesStarkDavidKravitz|francesstark@me.com|05/03/2014|16:57:49|well hello David!|
 |...|...|...|...|...|
 
-I'm no spreadsheet wizard, so to find the time elapsed between messages I'll use Python's datetime module.
+I'm no spreadsheet wizard, so to find the time elapsed between messages I use Python's datetime module.
 
 {% highlight python %}
 >>> import datetime
@@ -70,11 +70,11 @@ print '{' + ', '.join(output) + '}'
 {% endraw %}
 {% endhighlight %}
 
-A subset of the output:
+A subset of the output from the above:
 
 <pre>{% raw %}{{"dnkravitz", 6, "hi frances!"}, {"francesstark", 8, "well hello David!"}, {"dnkravitz", 30, "how’s it going?"}, {"francesstark", 9, "I’m feeling more than a little excited about much of what we discussed yesterday"}, {"dnkravitz", 17, "yeah me too"}, {"dnkravitz", 4, "we should start by telling the audience a bit about the start of this whole thing"}, {"dnkravitz", 15, "namely"}, {"dnkravitz", 6, "i had a friend who suggested that we do performance art"}, {"dnkravitz", 6, "well, what he called performance art"}, {"francesstark", 52, "hahahhaha"}}{% endraw %}</pre>
 
-AppleScript allows OS level automation for programs that impliment the interface for it (most do, which makes it very useful).[^3] To fake the conversation, two chat clients (iChat and Adium) are automated to talk to each other. In the following code sample, let's pretend I've already assigned all the output from the above into a variable called *theBigList*.
+AppleScript allows OS level automation for programs that implement the interface for it (most do, which makes it very useful).[^3] To fake the conversation, two chat clients (iChat and Adium) are automated to talk to each other. In the following code sample, pretend I've already assigned all the output from the above into a variable called *theBigList*.
 
 {% highlight applescript %}
 repeat with i from 1 to count of theBigList
@@ -100,7 +100,14 @@ repeat with i from 1 to count of theBigList
 end repeat
 {% endhighlight %}
 
-After all that work, we (Rhizome) ended up just manually recreating the performance with human actors. Why? With the automated method, one cannot see messages being typed into the message box before they are sent. Even though it is possible to simulate this typing with AppleScript, the rhythm of the typing, the puases for comprehension and other subtleties of the performance are not present in the log file. Any further attempt would be a mini Turing Test, where a bot must be programmed to type in such a way as to fool us into believing it is David Kravitz. I did however re-use much of this code to create a script for the human actors which included timing cues.
+<div class="img-box">
+<video muted controls>
+  <source src="/assets/video/Kimono-demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+</div>
+
+After all that work, we (Rhizome) ended up manually recreating the performance with human actors. Why? With the automated method, one cannot see messages being typed into the message box before they are sent. Even though it is possible to simulate this typing with AppleScript, the rhythm of the typing, the puases for comprehension and other subtleties of the performance are not present in the log file. Any further attempt would be a mini Turing Test, where a bot must be programmed to type in such a way as to fool us into believing it is David Kravitz. However, I was able to re-use much of this code to create a script for the human actors which included timing cues.
 
 **Footnotes**
 
