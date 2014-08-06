@@ -1,9 +1,11 @@
 ---
 layout: post
 title: "Reanimating Chat Logs with AppleScript"
-description: ""
+description: "Two chat clients (iChat and Adium) are automated to perform Frances Stark and David Kravitz's Opening the Kimono (2014)."
 date: 2014-08-13
 author: "Scott"
+author_twitter: "@protonpopsicle"
+image: "/assets/img/AppleScript_Logo.jpg"
 ---
 
 {% include image.html url="/assets/img/AppleScript_Logo.jpg" %} 
