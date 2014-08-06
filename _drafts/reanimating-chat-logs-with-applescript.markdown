@@ -2,7 +2,7 @@
 layout: post
 title: "Reanimating Chat Logs with AppleScript"
 description: ""
-date: 2014-07-30
+date: 2014-08-13
 author: "Scott"
 ---
 
