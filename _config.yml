@@ -8,3 +8,4 @@ highlighter: pygments
 exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
 timezone: America/New_York
 excerpt_separator: <!--more-->
+markdown: kramdown
