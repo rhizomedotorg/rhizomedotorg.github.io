@@ -2,7 +2,7 @@
 layout: post
 title: "Reanimating Chat Logs with AppleScript"
 description: "Two chat clients (iChat and Adium) are automated to perform Frances Stark and David Kravitz's Opening the Kimono (2014)."
-date: 2014-08-13
+date: 2014-08-07
 author: "Scott"
 author_twitter: "@protonpopsicle"
 image: "/assets/img/AppleScript_Logo.jpg"
@@ -10,7 +10,7 @@ image: "/assets/img/AppleScript_Logo.jpg"
 
 {% include image.html url="/assets/img/AppleScript_Logo.jpg" %} 
 
-The audience at Seven on Seven watched a projection of David Kravitz's screen as he chatted with Frances Stark in the Messages app for Mac (known as iChat up until 2012). This was their performance *Opening the Kimono*, a highlight of the conference. Later we kicked ourselves for not capturing David's screen during the performance. Our documentation consists of [this video](http://vimeo.com/96086719) and an .ichat log file--which David kindly provided. This post is about playing back *Opening the Kimono* from the log in real-time using AppleScript. For context about the piece, see [this article](http://rhizome.org/editorial/2014/jul/29/opening-kimono/) on Rhizome.
+The audience at Seven on Seven watched a projection of David Kravitz's screen as he chatted with Frances Stark in the Messages app for Mac (known as iChat up until 2012). This was their performance *Opening the Kimono*, a highlight of the conference. Later we kicked ourselves for not capturing David's screen during the performance. Our documentation consists of [this video](http://vimeo.com/96086719) and an .ichat log file--which David kindly provided. This post is about playing back *Opening the Kimono* from the log in real-time using AppleScript. For context about the piece, see [this article](http://rhizome.org/editorial/2014/aug/7/opening-kimono/) on Rhizome.
 
 <!--more-->
 
