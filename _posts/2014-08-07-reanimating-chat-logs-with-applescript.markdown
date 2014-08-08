@@ -16,14 +16,14 @@ The audience at Seven on Seven watched a projection of David Kravitz's screen as
 
 What does one get when opening a chat log in Messages? Pretty pastel chat bubbles. But this format is not so easy to parse[^1]. To wrangle the log file, I used the beautifully-named software [Logorrhea](http://spiny.com/logorrhea/). Logorrhea exports iChat logs as text files.[^2] The first line looks like:
 
-<pre>SevenOnSevenFrancesStarkDavidKravitz	dnkravitz@gmail.com	05/03/2014	16:57:43	hi frances!</pre>
+<pre>SevenOnSevenFrancesStarkDavidKravitz	davidkravitz	05/03/2014	16:57:43	hi frances!</pre>
 
 The above looks oddly like TSV (Tab-Separated Values). By changing the extension to .tsv, spreadsheet programs will happily open it, yielding something like:
 
 |A|B|C|D|E|
 |-|-|-|-|-|
-|SevenOnSevenFrancesStarkDavidKravitz|dnkravitz@gmail.com|05/03/2014|16:57:43|hi frances!|
-|SevenOnSevenFrancesStarkDavidKravitz|francesstark@me.com|05/03/2014|16:57:49|well hello David!|
+|SevenOnSevenFrancesStarkDavidKravitz|davidkravitz|05/03/2014|16:57:43|hi frances!|
+|SevenOnSevenFrancesStarkDavidKravitz|francesstark|05/03/2014|16:57:49|well hello David!|
 |...|...|...|...|...|
 
 I'm no spreadsheet wizard, so to find the time elapsed between messages I use Python's datetime module.
@@ -74,7 +74,7 @@ print '{' + ', '.join(output) + '}'
 
 A subset of the output from the above:
 
-<pre>{% raw %}{{"dnkravitz", 6, "hi frances!"}, {"francesstark", 8, "well hello David!"}, {"dnkravitz", 30, "how’s it going?"}, {"francesstark", 9, "I’m feeling more than a little excited about much of what we discussed yesterday"}, {"dnkravitz", 17, "yeah me too"}, {"dnkravitz", 4, "we should start by telling the audience a bit about the start of this whole thing"}, {"dnkravitz", 15, "namely"}, {"dnkravitz", 6, "i had a friend who suggested that we do performance art"}, {"dnkravitz", 6, "well, what he called performance art"}, {"francesstark", 52, "hahahhaha"}}{% endraw %}</pre>
+<pre>{% raw %}{{"davidkravitz", 6, "hi frances!"}, {"francesstark", 8, "well hello David!"}, {"davidkravitz", 30, "how’s it going?"}, {"francesstark", 9, "I’m feeling more than a little excited about much of what we discussed yesterday"}, {"davidkravitz", 17, "yeah me too"}, {"davidkravitz", 4, "we should start by telling the audience a bit about the start of this whole thing"}, {"davidkravitz", 15, "namely"}, {"davidkravitz", 6, "i had a friend who suggested that we do performance art"}, {"davidkravitz", 6, "well, what he called performance art"}, {"francesstark", 52, "hahahhaha"}}{% endraw %}</pre>
 
 AppleScript allows OS level automation for programs that implement the interface for it (most do, which makes it very useful).[^3] To fake the conversation, two chat clients (iChat and Adium) are automated to talk to each other. In the following code sample, pretend I've already assigned all the output from the above into a variable called *theBigList*.
 
@@ -85,7 +85,7 @@ repeat with i from 1 to count of theBigList
        set theDelay to item 2 of theLine
        set theMessage to item 3 of theLine
        
-       if (theSender = "dnkravitz") then
+       if (theSender = "davidkravitz") then
        	  tell application "iChat"
 	       set theBuddy to buddy "protonpopsicle" of service "AIM"
 	       send theMessage to theBuddy
