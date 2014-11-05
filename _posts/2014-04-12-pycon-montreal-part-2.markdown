@@ -3,7 +3,8 @@ layout: post
 title: "PyCon Montréal Part 2"
 description: ""
 date: 2014-04-12
-author: "Scott"
+author: "Scott Meisburger"
+author_twitter: "@protonpopsicle"
 ---
 
 {% include image.html url="/assets/img/pycon/chairs.jpg" %}
@@ -63,4 +64,4 @@ Guido used this program to pick topic for discussion from a pre-compiled list (m
 
 "I can be incredibly insecure. One news story that touts the virtues of Perl 6 can make me sleep bad, so if you want me off the pedestal, I'll happily come off."
 
-Videos of all talks from PyCon 2014 have been posted [here](http://pyvideo.org/category/50/pycon-us-2014). 
+Videos of all talks from PyCon 2014 have been posted [here](http://pyvideo.org/category/50/pycon-us-2014).

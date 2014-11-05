@@ -3,10 +3,11 @@ layout: post
 title: "Database-less, Data-driven Navigation"
 description: "A tutorial on building database-less, data-driven navigations in Python/Django."
 date: 2013-11-15
-author: "Scott"
+author: "Scott Meisburger"
+author_twitter: "@protonpopsicle"
 ---
 
-[Rhizome.org](http://rhizome.org/) used to have a page directory in the footer, breadcrumbs on certain pages, a primary and secondary nav articulated via dropdowns, and a topbar for user account and social media links. As of this month, no more! We've introduced a pair of sticky black bars. 
+[Rhizome.org](http://rhizome.org/) used to have a page directory in the footer, breadcrumbs on certain pages, a primary and secondary nav articulated via dropdowns, and a topbar for user account and social media links. As of this month, no more! We've introduced a pair of sticky black bars.
 
 {% include image.html url="/assets/img/rhizome_header.png" %}
 {% include image.html url="/assets/img/rhizome_footer.png" %}
@@ -78,7 +79,7 @@ def get_nav(context, section_name, sub_section_name):
     }
 {% endhighlight %}
 
-This adds to the template context everything needed to render the navigation properly, making it possible to highlight the current primary and sub items, or perform some other logic based on the navigation state. 
+This adds to the template context everything needed to render the navigation properly, making it possible to highlight the current primary and sub items, or perform some other logic based on the navigation state.
 
 Finally, let's do the navigation template: /path-to-project/templates/fragments/navbars.html
 

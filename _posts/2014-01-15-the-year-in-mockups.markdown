@@ -3,7 +3,8 @@ layout: post
 title: "2013: The Year in Mockups"
 description: "Amid crisis and struggle, there were also pristine mockups that remind us of our bright future."
 date: 2014-01-15
-author: "Scott"
+author: "Scott Meisburger"
+author_twitter: "@protonpopsicle"
 ---
 
 {% include image.html url="/assets/img/mockups/dev-blog-mockup.jpg" %}

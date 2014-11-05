@@ -3,7 +3,8 @@ layout: post
 title: "PyCon Montréal Part 1"
 description: "I'm at PyCon US 2014 in Montréal (a contradiction, right?). Good Pythonistas relish the opportunity to re-join the pack."
 date: 2014-04-11
-author: "Scott"
+author: "Scott Meisburger"
+author_twitter: "@protonpopsicle"
 ---
 
 I'm at PyCon US 2014 in Montréal (a contradiction, right?). Good Pythonistas relish the opportunity to re-join the pack. I'm seated in a row near the front, in a rare mood to look up tutorials for Emacs Org mode. Maybe this year, I'll make that leap to a text editor for grown ups.
