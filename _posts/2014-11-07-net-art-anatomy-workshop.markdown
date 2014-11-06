@@ -10,7 +10,7 @@ image: "/assets/img/union-jack.png"
 
 {% include image.html url="/assets/img/mozfest/Screen-Shot-2014-11-05-at-4.24.06-PM.png" description="hey" %}
 
-Net Art Anatomy is a Rhizome workshop which I fascilitated on October 26th at [MozFest 2014](http://2014.mozillafestival.org/) in London. "Union jack" by partipant Béatrice Lajous uses [Bootstrap](http://getbootstrap.com/), a popular web interface framework, as raw material for a browser-based work in the tradition of Alexi Shulgin's [Form Art](http://www.c3.hu/collection/form/).
+Net Art Anatomy is a Rhizome workshop which I fascilitated on October 26th at [MozFest 2014](http://2014.mozillafestival.org/) in London. "Union jack" by participant Béatrice Lajous uses [Bootstrap](http://getbootstrap.com/), a popular web interface framework, as raw material for a browser-based work in the tradition of Alexi Shulgin's [Form Art](http://www.c3.hu/collection/form/).
 
 <!--more-->
 
