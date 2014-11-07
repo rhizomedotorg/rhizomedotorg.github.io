@@ -12,7 +12,7 @@ image: "/assets/img/mozfest/Screen-Shot-2014-11-05-at-4.24.06-PM.png"
 
 {% include image.html url="/assets/img/mozfest/Screen-Shot-2014-11-05-at-4.24.06-PM.png" %}
 
- _Union jack_ made by participant Béatrice Lajous uses [Bootstrap](http://getbootstrap.com/){:target="_blank"}, a popular web interface framework, as raw material for a browser-based work in the tradition of Alexi Shulgin's [Form Art](http://www.c3.hu/collection/form/){:target="_blank"}.
+ _Union jack_ by participant Béatrice Lajous uses [Bootstrap](http://getbootstrap.com/){:target="_blank"}, a popular web interface framework, as raw material for a browser-based work in the tradition of Alexi Shulgin's [Form Art](http://www.c3.hu/collection/form/){:target="_blank"}.
 
 <!--more-->
 
