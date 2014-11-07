@@ -25,9 +25,9 @@ body, html {
     -webkit-text-size-adjust: 100%;
 }
 
-a, a:visited { 
+a, a:visited {
     color: #5878cc;
-    text-decoration: none; 
+    text-decoration: none;
 }
 
 ol, ul, li {
@@ -204,8 +204,8 @@ article h2 {
     line-height: 30px;
 }
 
-article h2 a, 
-article h2 a:visited, 
+article h2 a,
+article h2 a:visited,
 article h2 a:hover {
     text-decoration: none;
     color: black;
@@ -350,4 +350,8 @@ th, td {
 thead tr,
 tbody tr:nth-of-type(even) {
     background: rgb(226, 230, 235);
+}
+
+.underline {
+    text-decoration: underline;
 }
