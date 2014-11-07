@@ -14,15 +14,18 @@ Net Art Anatomy is a Rhizome workshop which I fascilitated on October 26th at [M
 
 <!--more-->
 
-We began by looking together at examples of internet art by seminal artists--from JODI, recently anounced winner of the [Prix Net Art prize](http://prixnetart.org/), to [@Horse_ebooks](https://twitter.com/Horse_ebooks) (if a phenomenon may be considered an artist).
-
 {% include image.html url="/assets/img/mozfest/mozfest1.jpg" %}
-{% include image.html url="/assets/img/mozfest/mozfest5.jpg" %}
 
-A list of email addresses. The who's who for this next wave of futue net art.
+We began by looking together at examples of internet art by seminal artists--from JODI, recently anounced winner of the [Prix Net Art prize](http://prixnetart.org/), to [@Horse_ebooks](https://twitter.com/Horse_ebooks) (if a phenomenon may be considered an artist).
 
 {% include image.html url="/assets/img/mozfest/mozfest6.png" %}
 
-For more info browse my vanilla keynote slides. Also check out the [project instructions page](http://labs.rhizome.org/net-art-anatomy) and MozFest's [Art Track Tumblr](http://mozfestartoftheweb.tumblr.com/).
+A list of email addresses. The who's who for this next wave of futue net art.
+
+{% include image.html url="/assets/img/mozfest/mozfest5.jpg" %}
+
+These creatives gained a deeper appreciation for the practices, both technical and conceptual/critical, used in making internet art, and an understanding of the life of media technologies outside prescribed historical or functional roles--not bad for a day's work. Net Art Anatomy may be coming to a high school classroom near you. For more info see slides below. Also check out the [project instructions page](http://labs.rhizome.org/net-art-anatomy) and MozFest's [Art Track Tumblr](http://mozfestartoftheweb.tumblr.com/) and [Flickr](https://secure.flickr.com/photos/neon_lobster/sets/72157648629817189/).
 
 <iframe src="//www.slideshare.net/slideshow/embed_code/40978339" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/rhizomedotorg/net-art-anatomy-by-rhizome" title="Net Art Anatomy" target="_blank">Net Art Anatomy</a> </strong> from <strong><a href="//www.slideshare.net/rhizomedotorg" target="_blank">rhizomedotorg</a></strong> </div>
+
+[Photos from the festival!](https://secure.flickr.com/photos/neon_lobster/sets/72157648629817189/)
