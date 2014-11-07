@@ -5,7 +5,7 @@ description: "Probing the Essence of Net Art"
 date: 2014-11-07
 author: "Scott Meisburger"
 author_twitter: "@protonpopsicle"
-image: "/assets/img/union-jack.png"
+image: "/assets/img/mozfest/Screen-Shot-2014-11-05-at-4.24.06-PM.png"
 ---
 
 <span class="underline">Net Art Anatomy</span> is a Rhizome workshop which I fascilitated on October 26th at [MozFest 2014](http://2014.mozillafestival.org/){:target="_blank"} in London.
