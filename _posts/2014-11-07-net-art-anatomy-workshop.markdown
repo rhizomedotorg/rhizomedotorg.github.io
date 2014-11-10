@@ -8,7 +8,7 @@ author_twitter: "@protonpopsicle"
 image: "/assets/img/mozfest/Screen-Shot-2014-11-05-at-4.24.06-PM.png"
 ---
 
-<span class="underline">Net Art Anatomy</span> is a Rhizome workshop which I fascilitated on October 26th at [MozFest 2014](http://2014.mozillafestival.org/){:target="_blank"} in London.
+<span class="underline">Net Art Anatomy</span> is a Rhizome workshop which I facilitated on October 26th at [MozFest 2014](http://2014.mozillafestival.org/){:target="_blank"} in London.
 
 {% include image.html url="/assets/img/mozfest/Screen-Shot-2014-11-05-at-4.24.06-PM.png" %}
 
