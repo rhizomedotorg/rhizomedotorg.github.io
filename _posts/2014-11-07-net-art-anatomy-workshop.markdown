@@ -22,7 +22,7 @@ We began by looking together at examples of internet art by seminal artists--fro
 
 {% include image.html url="/assets/img/mozfest/mozfest6.png" %}
 
-A list of email addresses (redacted). The who's who for this next wave of futue net art.
+A list of email addresses (redacted). The who's who for this next wave of future net art.
 
 {% include image.html url="/assets/img/mozfest/mozfest5.jpg" %}
 
