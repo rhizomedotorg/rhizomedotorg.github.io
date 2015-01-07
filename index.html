@@ -11,7 +11,7 @@ website: true
            
     <article>
         <h2><a class="{% if post.external-url %}link-post{% endif %}" href="{% if post.external-url %}{{ post.external-url }}{% else %}{{ post.url }}{% endif %}">{{ post.title }}</a></h2>
-        <div class="byline">{{ post.date | date: "%m / %d / %Y" }}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;by {{ post.author }}</div>
+        <div class="byline">{{ post.date | date: "%m / %d / %Y" }}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;by <a href="http://twitter.com/{{post.author_twitter}}">{{ post.author }}</a></div>
 
         {% if post.external-url %}
         {% else %}

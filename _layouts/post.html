@@ -4,7 +4,7 @@ layout: default
 
 <article>
     <h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
-    <div class="byline">{{ page.date | date: "%m / %d / %Y" }}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;by {{ page.author }}</div>
+    <div class="byline">{{ page.date | date: "%m / %d / %Y" }}&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;by <a href="http://twitter.com/{{page.author_twitter}}">{{ page.author }}</a></div>
 
     {{ content }}
 </article>
